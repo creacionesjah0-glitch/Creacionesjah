@@ -3,100 +3,549 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creaciones Jah - Flores Eternas & Detalles</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Creaciones Jah - Flores Eternas & Detalles Especiales</title>
+    <!-- Fuentes Elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #d4a373;
             --primary-dark: #bc8a5f;
             --secondary: #faedcd;
+            --accent: #e76f51;
+            --bg-light: #fdfbf7;
             --text-dark: #2b2d42;
-            --text-light: #6c757d;
+            --text-muted: #6c757d;
             --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow: 0 10px 30px rgba(0,0,0,0.06);
             --radius: 16px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: #fcfbf7; color: var(--text-dark); line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-        /* Header */
-        header { background-color: rgba(255, 255, 255, 0.95); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
-        .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary-dark); text-decoration: none; }
-        .nav-links { display: flex; list-style: none; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
 
-        /* Hero */
-        .hero { background: linear-gradient(135deg, #faedcd 0%, #fefae0 100%); padding: 5rem 2rem; text-align: center; }
-        .hero h1 { font-size: 3rem; color: var(--primary-dark); margin-bottom: 1rem; }
-        .btn-primary { display: inline-block; background-color: var(--primary); color: var(--white); padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
 
-        /* Catálogo Grid */
-        .catalog-section { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
-        .section-title { text-align: center; margin-bottom: 3rem; }
-        .filter-buttons { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
-        .filter-btn { background: var(--white); border: 1px solid #e0e0e0; padding: 0.6rem 1.5rem; border-radius: 25px; cursor: pointer; }
-        .filter-btn.active, .filter-btn:hover { background: var(--primary); color: var(--white); }
+        /* HEADER & NAVEGACIÓN */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+        }
 
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
-        .product-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s ease; display: flex; flex-direction: column; }
-        .product-card:hover { transform: translateY(-8px); }
-        .product-img-wrapper { position: relative; width: 100%; height: 260px; overflow: hidden; background-color: #f0f0f0; }
-        .product-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .product-card:hover .product-img-wrapper img { transform: scale(1.08); }
-        .product-badge { position: absolute; top: 15px; right: 15px; background-color: rgba(255, 255, 255, 0.9); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; color: var(--primary-dark); }
-        .product-details { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
-        .product-title { font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .product-description { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1; }
-        .product-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f0f0f0; padding-top: 1rem; }
-        .product-price { font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); }
-        .btn-whatsapp { background-color: #25d366; color: white; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
 
-        /* FAQ Acordeón */
-        .faq-section { background-color: #f7f5ee; padding: 5rem 2rem; }
-        .faq-container { max-width: 800px; margin: 0 auto; }
-        .accordion-item { background: var(--white); border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.03); overflow: hidden; }
-        .accordion-header { width: 100%; padding: 1.2rem 1.5rem; text-align: left; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 1.5rem; color: var(--text-light); }
-        .accordion-content.show { padding: 0 1.5rem 1.5rem 1.5rem; max-height: 200px; }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-        /* Footer */
-        footer { background-color: var(--text-dark); color: var(--white); text-align: center; padding: 3rem 2rem; }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* INICIO / HERO */
+        .hero {
+            background: linear-gradient(135deg, #faedcd 0%, #fefae0 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 0.8rem 2.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(188, 138, 95, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* SECCIONES GENERALES */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.4rem;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* QUIÉNES SOMOS */
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-box {
+            background: var(--white);
+            padding: 1.2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .feature-box i {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        /* CATÁLOGO */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+            border-color: var(--primary-dark);
+        }
+
+        .products-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            background-color: #f0f0f0;
+        }
+
+        .product-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .product-details {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .btn-whatsapp-card {
+            background-color: #25d366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* PREGUNTAS FRECUENTES (ACORDEÓN) */
+        .faq-section {
+            background-color: #f7f5ee;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background: var(--white);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            background: none;
+            border: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .accordion-header i {
+            transition: transform 0.3s ease;
+            color: var(--primary-dark);
+        }
+
+        .accordion-header.active i {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .accordion-content.show {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            max-height: 200px;
+        }
+
+        /* CONTACTO */
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+        }
+
+        .btn-direct-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #25d366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        /* BOTÓN FLOTANTE WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .footer-socials a {
+            color: var(--white);
+            font-size: 1.4rem;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .about-container, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/tuNumeroAqui?text=Hola,%20me%20gustaría%20solicitar%20información" class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- NAVEGACIÓN -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Creaciones Jah</a>
+            <a href="#inicio" class="logo"><i class="fa-solid fa-rose"></i> Creaciones Jah</a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Quiénes Somos</a></li>
                 <li><a href="#catalogo">Catálogo</a></li>
                 <li><a href="#faq">Preguntas Frecuentes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </header>
 
+    <!-- INICIO / HERO -->
     <section class="hero" id="inicio">
-        <h1>Flores Eternas & Detalles Especiales</h1>
-        <p>Ramos hechos a mano con amor, listos para perdurar en tus momentos más memorables.</p>
-        <br>
-        <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+        <div class="hero-content">
+            <h1>Flores Eternas & Detalles Inolvidables</h1>
+            <p>Diseños artesanales hechos a mano con amor y dedicación. Regala detalles únicos que perduran para siempre.</p>
+            <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
+        </div>
     </section>
 
-    <!-- Catálogo Organizado -->
-    <section class="catalog-section" id="catalogo">
+    <!-- QUIÉNES SOMOS -->
+    <section id="nosotros">
         <div class="section-title">
-            <h2>Nuestro Catálogo</h2>
+            <h2>Quiénes Somos</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-text">
+                <h3>Creando recuerdos que no se marchitan</h3>
+                <br>
+                <p>En <strong>Creaciones Jah</strong> nos apasiona convertir momentos especiales en recuerdos eternos. Nos especializamos en la confección artesanal de floristería satinada y regalos personalizados diseñados minuciosamente a mano.</p>
+                <p>Cada rosa y cada arreglo refleja nuestra dedicación por el detalle, garantizando un regalo único que se mantendrá perfecto con el paso del tiempo.</p>
+            </div>
+            <div class="about-features">
+                <div class="feature-box">
+                    <i class="fa-solid fa-heart"></i>
+                    <h4>100% Hecho a Mano</h4>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-infinity"></i>
+                    <h4>Durabilidad Eterna</h4>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h4>Personalizable</h4>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-gift"></i>
+                    <h4>Empaque Especial</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo">
+        <div class="section-title">
+            <h2>Catálogo de Productos</h2>
         </div>
 
         <div class="filter-buttons">
             <button class="filter-btn active" onclick="filterCategory('todos')">Todos</button>
             <button class="filter-btn" onclick="filterCategory('ramos')">Ramos Eternos</button>
-            <button class="filter-btn" onclick="filterCategory('cajas')">Cajas de Regalo</button>
+            <button class="filter-btn" onclick="filterCategory('cajas')">Cajas Sorpresa</button>
             <button class="filter-btn" onclick="filterCategory('detalles')">Detalles</button>
         </div>
 
@@ -109,10 +558,10 @@
                 </div>
                 <div class="product-details">
                     <h3 class="product-title">Ramo Eterno Satinado</h3>
-                    <p class="product-description">Hermoso ramo elaborado con rosas hechas a mano en listón satinado de alta calidad.</p>
+                    <p class="product-description">Elegante ramo elaborado con rosas confeccionadas a mano en listón satinado de primera calidad.</p>
                     <div class="product-footer">
                         <span class="product-price">$150.00</span>
-                        <a href="https://wa.me/tuNumeroAqui?text=Hola,%20me%20interesa%20el%20Ramo%20Eterno%20Satinado" class="btn-whatsapp" target="_blank">
+                        <a href="https://wa.me/tuNumeroAqui?text=Hola,%20me%20interesa%20el%20Ramo%20Eterno%20Satinado" class="btn-whatsapp-card" target="_blank">
                             <i class="fa-brands fa-whatsapp"></i> Pedir
                         </a>
                     </div>
@@ -126,11 +575,11 @@
                     <span class="product-badge">Especial</span>
                 </div>
                 <div class="product-details">
-                    <h3 class="product-title">Caja Sorpresa de Flores</h3>
-                    <p class="product-description">Arreglo floral en caja rígida acompañado de chocolates o mensaje personalizado.</p>
+                    <h3 class="product-title">Caja Sorpresa Floral</h3>
+                    <p class="product-description">Arreglo floral en caja rígida decorativa, ideal para acompañar con chocolates y dedicatoria.</p>
                     <div class="product-footer">
-                        <span class="product-price">$200.00</span>
-                        <a href="https://wa.me/tuNumeroAqui?text=Hola,%20me%20interesa%20la%20Caja%20Sorpresa" class="btn-whatsapp" target="_blank">
+                        <span class="product-price">$220.00</span>
+                        <a href="https://wa.me/tuNumeroAqui?text=Hola,%20me%20interesa%20la%20Caja%20Sorpresa%20Floral" class="btn-whatsapp-card" target="_blank">
                             <i class="fa-brands fa-whatsapp"></i> Pedir
                         </a>
                     </div>
@@ -140,15 +589,15 @@
             <!-- Producto 3 -->
             <div class="product-card" data-category="detalles">
                 <div class="product-img-wrapper">
-                    <img src="rosa-individual.jpg" alt="Rosa Eterna Individual">
+                    <img src="rosa-individual.jpg" alt="Rosa Individual Eterna">
                     <span class="product-badge">Popular</span>
                 </div>
                 <div class="product-details">
                     <h3 class="product-title">Rosa Eterna Individual</h3>
-                    <p class="product-description">Detalle delicado en empaque individual con moño decorativo.</p>
+                    <p class="product-description">Detalle delicado presentado en empaque individual decorado con cinta elegante.</p>
                     <div class="product-footer">
                         <span class="product-price">$45.00</span>
-                        <a href="https://wa.me/tuNumeroAqui?text=Hola,%20me%20interesa%20la%20Rosa%20Eterna" class="btn-whatsapp" target="_blank">
+                        <a href="https://wa.me/tuNumeroAqui?text=Hola,%20me%20interesa%20la%20Rosa%20Eterna%20Individual" class="btn-whatsapp-card" target="_blank">
                             <i class="fa-brands fa-whatsapp"></i> Pedir
                         </a>
                     </div>
@@ -157,7 +606,7 @@
         </div>
     </section>
 
-    <!-- Preguntas Frecuentes Reorganizadas -->
+    <!-- PREGUNTAS FRECUENTES -->
     <section class="faq-section" id="faq">
         <div class="section-title">
             <h2>Preguntas Frecuentes</h2>
@@ -165,42 +614,87 @@
         <div class="faq-container">
             <div class="accordion-item">
                 <button class="accordion-header">
-                    ¿Con cuánto tiempo de anticipación debo realizar mi pedido?
+                    ¿Con cuánto tiempo de anticipación debo hacer mi pedido?
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="accordion-content">
-                    <p>Recomendamos realizar tu pedido con al menos 3 a 5 días de anticipación para asegurar disponibilidad y confección cuidada.</p>
+                    <p>Recomendamos realizar tu pedido con un mínimo de 3 a 5 días de anticipación, ya que cada producto es confeccionado a mano minuciosamente.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <button class="accordion-header">
-                    ¿Puedo personalizar los colores y detalles?
+                    ¿Puedo personalizar los colores de mi arreglo?
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="accordion-content">
-                    <p>¡Sí, totalmente! Puedes elegir el color de las cintas, envolturas y agregar notas o accesorios personalizados.</p>
+                    <p>¡Por supuesto! Puedes elegir la combinación de colores para los pétalos, la envoltura, los moños y agregar mensajes personalizados.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <button class="accordion-header">
-                    ¿Hacen entregas a domicilio?
+                    ¿Cómo realizan las entregas?
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="accordion-content">
-                    <p>Realizamos entregas locales y puntos de encuentro acordados previamente por WhatsApp.</p>
+                    <p>Contamos con puntos de entrega locales acordados y envíos directos a domicilio según tu ubicación. Escríbenos por WhatsApp para coordinar.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <div class="section-title">
+            <h2>Contacto & Pedidos</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>¡Hablemos de tu idea!</h3>
+                <p>Estamos listos para ayudarte a diseñar el regalo perfecto.</p>
+                <br>
+                <div class="contact-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>WhatsApp directo para pedidos y cotizaciones.</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Atención de Lunes a Sábado de 9:00 AM a 7:00 PM.</span>
+                </div>
+                <a href="https://wa.me/+573222353969text=Hola,%20quisiera%20cotizar%20un%20pedido%20personalizado" class="btn-direct-wa" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje
+                </a>
+            </div>
+            <div class="contact-info">
+                <h3>Redes Sociales</h3>
+                <p>Síguenos para ver nuestros trabajos diarios y nuevas colecciones.</p>
+                <br>
+                <div class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@CreacionesJah</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span>Creaciones Jah Oficial</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>Creaciones Jah &copy; 2026 - Todos los derechos reservados</p>
+        <p>Creaciones Jah &copy; 2026 - Flores Eternas & Detalles Especiales</p>
+        <div class="footer-socials">
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/tuNumeroAqui" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
     </footer>
 
+    <!-- JAVASCRIPT -->
     <script>
-        // JS para el acordeón de preguntas
+        // Acordeón Preguntas Frecuentes
         document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', () => {
                 const content = header.nextElementSibling;
@@ -209,7 +703,7 @@
             });
         });
 
-        // JS para el filtro de productos
+        // Filtrado del Catálogo
         function filterCategory(category) {
             document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
