@@ -1,12 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creacionesjah</title>
+    <title>Creaciones Jah | Flores Eternas y Detalles</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Encabezado / Navegación -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Creaciones <span>Jah</span></a>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Diseños</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#faq">Preguntas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero / Portada -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Flores Eternas & Detalles Especiales</h1>
+            <p>Creamos recuerdos inolvidables hechos a mano con delicada cinta satinada y acabados únicos. Arte y pasión en cada detalle.</p>
+            <a href="https://wa.me/573222353969?text=Hola%20Creaciones%20Jah,%20quiero%20personalizar%20un%20arreglo." class="btn-primary" target="_blank">Personalizar mi Arreglo</a>
+        </div>
+    </section>
+
+    <!-- Sección de Destacados (Tarjetas Giratorias 3D) -->
+    <section id="servicios" class="services">
+        <h2 class="section-title">Nuestros Diseños Destacados</h2>
+        <p class="section-subtitle">Pasa el cursor sobre la tarjeta para descubrir el detalle oculto detras de cada flor</p>
+        
+        <div class="cards-container">
+            
+            <!-- TARJETA 1 -->
+            <div class="card-flip-container">
+                <input type="checkbox" id="flip-1" class="flip-toggle">
+                <div class="card-flip-inner">
+                    <div class="card-front" style="background-image: url('ramo-satinado.jpg');">
+                        <div class="card-front-content">
+                            <h3>Ramo Imperial Satinado</h3>
+                            <label for="flip-1" class="btn-detail">Ver detalles</label>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('ramo-satinado.jpg');">
+                        <div class="card-back-overlay">
+                            <h3>Diseño Vino & Crema</h3>
+                            <p>Elaborado meticulosamente a mano con rosas de cinta satinada en tonos vino tinto y crema, acompañadas por una rosa multinivel en el centro. Envoltura estructurada tipo abanico para un acabado elegante.</p>
+                            <label for="flip-1" class="btn-back-close">Volver</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TARJETA 2 -->
+            <div class="card-flip-container">
+                <input type="checkbox" id="flip-2" class="flip-toggle">
+                <div class="card-flip-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800&auto=format&fit=crop');">
+                        <div class="card-front-content">
+                            <h3>Cúpulas Encantadas</h3>
+                            <label for="flip-2" class="btn-detail">Ver detalles</label>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800&auto=format&fit=crop');">
+                        <div class="card-back-overlay">
+                            <h3>Cúpula con Luz LED</h3>
+                            <p>Protege tu flor eterna favorita en una cápsula de cristal con base de madera y luces cálidas que resaltan la textura y brillo del satinado. Ideal para veladoras o veladas románticas.</p>
+                            <label for="flip-2" class="btn-back-close">Volver</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TARJETA 3 -->
+            <div class="card-flip-container">
+                <input type="checkbox" id="flip-3" class="flip-toggle">
+                <div class="card-flip-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop');">
+                        <div class="card-front-content">
+                            <h3>Cajas & Regalos sorpresa</h3>
+                            <label for="flip-3" class="btn-detail">Ver detalles</label>
+                        </div>
+                    </div>
+                    <div class="card-back" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop');">
+                        <div class="card-back-overlay">
+                            <h3>Boxes con Flores y Dulces</h3>
+                            <p>Cajas de regalo personalizadas con arreglos de flores eternas, espacio para dedicatorias especiales, chocolates o pequeños obsequios adicionales.</p>
+                            <label for="flip-3" class="btn-back-close">Volver</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN NUEVA: CATÁLOGO DE PRODUCTOS (Filtros en CSS Puro) -->
+    <section id="catalogo" class="catalog-section">
+        <h2 class="section-title">Catálogo Completo</h2>
+        <p class="section-subtitle">Selecciona una categoría para explorar nuestros estilos</p>
+
+        <!-- Filtros por Radios (CSS Puro) -->
+        <input type="radio" id="cat-todos" name="cat-filter" checked>
+        <input type="radio" id="cat-ramos" name="cat-filter">
+        <input type="radio" id="cat-girasoles" name="cat-filter">
+        <input type="radio" id="cat-boxes" name="cat-filter">
+
+        <div class="filter-buttons">
+            <label for="cat-todos" class="filter-btn">Todos</label>
+            <label for="cat-ramos" class="filter-btn">Ramos Satinados</label>
+            <label for="cat-girasoles" class="filter-btn">Girasoles Eternos</label>
+            <label for="cat-boxes" class="filter-btn">Boxes & Cúpulas</label>
+        </div>
+
+        <div class="catalog-grid">
+            <!-- Producto 1: Ramo Vino -->
+            <div class="catalog-item item-ramos">
+                <div class="catalog-img" style="background-image: url('ramo-satinado.jpg');"></div>
+                <div class="catalog-info">
+                    <h4>Ramo Real Bicolor</h4>
+                    <p>Rosas de cinta en tonos vino y marfil con corona o mariposas opcionales.</p>
+                    <a href="https://wa.me/573222353969?text=Hola,%20quisiera%20cotizar%20el%20Ramo%20Real%20Bicolor." class="btn-catalog-order" target="_blank">Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Producto 2: Girasoles -->
+            <div class="catalog-item item-girasoles">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="catalog-info">
+                    <h4>Ramo de Girasoles Eternos</h4>
+                    <p>Girasoles radiantes elaborados en cinta de satén color amarillo oro.</p>
+                    <a href="https://wa.me/573222353969?text=Hola,%20me%20interesa%20un%20Ramo%20de%20Girasoles%20Eternos." class="btn-catalog-order" target="_blank">Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Producto 3: Box -->
+            <div class="catalog-item item-boxes">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="catalog-info">
+                    <h4>Box Elegante Corazón</h4>
+                    <p>Caja con rosas satinadas rojas y lazo personalizado con mensaje.</p>
+                    <a href="https://wa.me/573222353969?text=Hola,%20me%20gustaría%20el%20Box%20Elegante%20Corazón." class="btn-catalog-order" target="_blank">Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Producto 4: Ramo Azul -->
+            <div class="catalog-item item-ramos">
+                <div class="catalog-img" style="background-image: url('https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="catalog-info">
+                    <h4>Ramo Noche Estrellada</h4>
+                    <p>Rosas en cinta satinada azul rey con luces LED de microhilo incluidas.</p>
+                    <a href="https://wa.me/573222353969?text=Hola,%20quiero%20el%20Ramo%20Noche%20Estrellada." class="btn-catalog-order" target="_blank">Pedir por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="about">
+        <div class="about-content">
+            <h2>Creaciones Jah</h2>
+            <p>En Creaciones Jah transformamos tus emociones en detalles duraderos. Elaboramos totalmente a mano cada flor de cinta satinada, garantizando combinaciones únicas de colores, formas y arreglos que mantendrán intacto tu amor y recuerdo a través del tiempo.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NUEVA: PREGUNTAS FRECUENTES (FAQ Acordeón sin JS) -->
+    <section id="faq" class="faq-section">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-subtitle">Todo lo que necesitas saber antes de hacer tu pedido</p>
+
+        <div class="faq-container">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq-1" class="faq-toggle">
+                <label for="faq-1" class="faq-title">¿De qué materiales están hechas las flores eternas? <span class="faq-icon">+</span></label>
+                <div class="faq-content">
+                    <p>Todas nuestras flores son elaboradas artesanalmente pétalo por pétalo utilizando cintas de satén de alta calidad, garantizando un acabado suave, brillante e inalterable con el paso del tiempo.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq-2" class="faq-toggle">
+                <label for="faq-2" class="faq-title">¿Con cuánta anticipación debo realizar mi pedido? <span class="faq-icon">+</span></label>
+                <div class="faq-content">
+                    <p>Al ser un trabajo 100% hecho a mano y totalmente personalizado, recomendamos realizar tu pedido con mínimo 2 a 4 días de anticipación según el tamaño del arreglo.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq-3" class="faq-toggle">
+                <label for="faq-3" class="faq-title">¿Puedo personalizar los colores y la cantidad de flores? <span class="faq-icon">+</span></label>
+                <div class="faq-content">
+                    <p>¡Por supuesto! En Creaciones Jah tú eliges la paleta de colores, la cantidad de rosas o girasoles, el tipo de envoltura y los accesorios adicionales (coronas, mariposas, luces LED o tarjetas escritas a mano).</p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq-4" class="faq-toggle">
+                <label for="faq-4" class="faq-title">¿Cómo realizo el pago y la entrega? <span class="faq-icon">+</span></label>
+                <div class="faq-content">
+                    <p>Coordinamos todos los detalles de pago seguro y envío o entrega presencial directamente a través de nuestro número oficial de WhatsApp +57 322 2353969.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página (Footer) -->
+    <footer id="contacto" class="footer">
+        <div class="footer-content">
+            <blockquote class="motivational-quote">
+                "Como las flores eternas, hay sentimientos y recuerdos que nunca se marchitan."
+            </blockquote>
+            <p class="copyright">&copy; 2026 Creaciones Jah. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/573222353969?text=Hola%20Creaciones%20Jah,%20me%20gustaría%20personalizar%20un%20detalle%20de%20flores%20eternas." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar a Creaciones Jah por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.138-2.132c2.379 1.3 5.086 1.983 7.862 1.983 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.45 0-4.852-0.655-6.957-1.9l-0.498-0.297-5.177 1.357 1.38-5.137-0.325-0.518c-1.363-2.172-2.083-4.685-2.083-7.248 0-7.58 6.162-13.743 13.742-13.743s13.743 6.162 13.743 13.743c0 7.58-6.162 13.743-13.743 13.743zM22.518 19.308c-0.357-0.178-2.112-1.042-2.438-1.162s-0.565-0.178-0.803 0.178c-0.238 0.357-0.922 1.162-1.13 1.4-0.208 0.238-0.417 0.268-0.773 0.089s-1.503-0.553-2.863-1.767c-1.058-0.943-1.773-2.108-1.982-2.465s-0.022-0.55 0.157-0.728c0.162-0.16 0.357-0.417 0.535-0.625s0.238-0.357 0.357-0.595c0.118-0.238 0.06-0.447-0.03-0.625s-0.803-1.935-1.102-2.65c-0.29-0.695-0.585-0.6-0.803-0.612-0.208-0.010-0.447-0.012-0.685-0.012s-0.625 0.089-0.952 0.447c-0.327 0.357-1.25 1.222-1.25 2.98 0 1.758 1.28 3.458 1.458 3.697 0.178 0.238 2.52 3.848 6.105 5.397 0.852 0.368 1.518 0.588 2.037 0.753 0.857 0.272 1.637 0.233 2.253 0.142 0.687-0.102 2.112-0.863 2.41-1.697 0.298-0.833 0.298-1.548 0.208-1.697-0.088-0.148-0.327-0.238-0.685-0.417z"></path>
+        </svg>
+    </a>
+
 </body>
 </html>
