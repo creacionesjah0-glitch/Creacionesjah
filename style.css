@@ -1,0 +1,408 @@
+/* ==========================================================================
+   VARIABLES Y ESTILOS BASE
+   ========================================================================== */
+:root {
+    --primary-color: #d4a373;
+    --primary-dark: #bc8a5f;
+    --secondary-color: #fefae0;
+    --bg-light: #faf7f2;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --white: #ffffff;
+    --whatsapp-color: #25d366;
+    
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+    
+    --transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================================== */
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   SECCIÓN HERO / PORTADA
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1.5rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.9rem 2.2rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   EFECTO GIRO 180° EN TARJETAS (CSS PURO SIN JAVASCRIPT)
+   ========================================================================== */
+.services {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Checkbox oculto para dar soporte táctil/móviles */
+.flip-toggle {
+    display: none;
+}
+
+/* Contenedor principal 3D */
+.card-flip-container {
+    perspective: 1000px;
+    height: 400px;
+}
+
+/* Elemento interno que gira */
+.card-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* GIRO AL PASAR EL CURSOR (HOVER) O AL DAR CLIC EN BOTÓN */
+.card-flip-container:hover .card-flip-inner,
+.flip-toggle:checked + .card-flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras de la tarjeta */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* --- FRENTE DE LA TARJETA --- */
+.card-front {
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-front-content {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-front-content h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+/* Botón "Ver detalles" del Frente */
+.btn-detail {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.6rem 1.4rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-detail:hover {
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+/* --- REVERSO DE LA TARJETA --- */
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* Capa de fondo oscurecida para resaltar texto */
+.card-back-overlay {
+    background-color: rgba(0, 0, 0, 0.82); /* Fondo Oscurecido */
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.card-back-overlay h3 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card-back-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.btn-back-close {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    text-decoration: underline;
+    display: none; /* Se activa opcionalmente en móviles */
+}
+
+/* ==========================================================================
+   SECCIÓN SOBRE NOSOTROS
+   ========================================================================== */
+.about {
+    background-color: #f3ede2;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.footer {
+    background-color: #222222;
+    color: var(--white);
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.motivational-quote {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.copyright {
+    color: #888888;
+    font-size: 0.85rem;
+    border-top: 1px solid #333333;
+    padding-top: 2rem;
+}
+
+/* ==========================================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================================== */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-color);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+    z-index: 2000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 8px 20px rgba(0,0,0,0.4);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    fill: var(--white);
+}
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .motivational-quote {
+        font-size: 1.4rem;
+    }
+
+    .btn-back-close {
+        display: inline-block;
+    }
+}
