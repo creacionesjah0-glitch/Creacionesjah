@@ -1,408 +1,443 @@
-/* ==========================================================================
+/* ==========================================
    VARIABLES Y ESTILOS BASE
-   ========================================================================== */
+   ========================================== */
 :root {
-    --primary-color: #d4a373;
-    --primary-dark: #bc8a5f;
-    --secondary-color: #fefae0;
-    --bg-light: #faf7f2;
-    --text-color: #333333;
-    --text-muted: #666666;
-    --white: #ffffff;
-    --whatsapp-color: #25d366;
-    
-    --font-heading: 'Cormorant Garamond', serif;
+    --gold-primary: #d4af37;
+    --gold-hover: #f3e5ab;
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-light: #f5f5f5;
+    --text-muted: #a0a0a0;
+    --font-heading: 'Cinzel', serif;
     --font-body: 'Montserrat', sans-serif;
-    
-    --transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
     scroll-behavior: smooth;
 }
 
 body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     font-family: var(--font-body);
-    color: var(--text-color);
-    background-color: var(--bg-light);
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   ENCABEZADO Y NAVEGACIÓN
-   ========================================================================== */
+/* ==========================================
+   ENCABEZADO / HEADER
+   ========================================== */
 .header {
-    background-color: rgba(255, 255, 255, 0.95);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(5px);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 2rem;
+    padding: 20px 8%;
+    background-color: rgba(18, 18, 18, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-.logo {
+.logo h1 {
     font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-color);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: var(--text-light);
+}
+
+.logo h1 span {
+    color: var(--gold-primary);
+}
+
+.nav a {
+    color: var(--text-light);
     text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.9rem;
     letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
-.logo span {
-    color: var(--primary-color);
+.nav a:hover {
+    color: var(--gold-primary);
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.nav-menu a:hover {
-    color: var(--primary-color);
-}
-
-/* ==========================================================================
-   SECCIÓN HERO / PORTADA
-   ========================================================================== */
+/* ==========================================
+   HERO / BANNER PRINCIPAL
+   ========================================== */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-    height: 80vh;
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    color: var(--white);
-    padding: 0 1.5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                radial-gradient(circle, rgba(212,175,55,0.15) 0%, rgba(18,18,18,1) 70%);
+    padding: 0 20px;
+    margin-top: 60px;
 }
 
-.hero-content {
-    max-width: 800px;
-}
-
-.hero-content h1 {
+.hero-content h2 {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    font-size: 3rem;
+    color: var(--gold-primary);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 30px auto;
 }
 
 .btn-primary {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 0.9rem 2.2rem;
+    padding: 12px 35px;
+    background-color: transparent;
+    color: var(--gold-primary);
+    border: 2px solid var(--gold-primary);
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.85rem;
+    font-weight: 600;
     letter-spacing: 1px;
+    text-transform: uppercase;
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--gold-primary);
+    color: var(--bg-dark);
 }
 
-/* ==========================================================================
-   EFECTO GIRO 180° EN TARJETAS (CSS PURO SIN JAVASCRIPT)
-   ========================================================================== */
-.services {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+/* ==========================================
+   CATÁLOGO DE PRODUCTOS - EFECTO 3D FLIP (180°)
+   ========================================== */
+.catalog {
+    padding: 100px 8%;
     text-align: center;
 }
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 2.8rem;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    color: var(--gold-primary);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
 }
 
-.section-subtitle {
-    color: var(--text-muted);
-    margin-bottom: 3rem;
-    font-weight: 300;
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 2px;
+    background: var(--gold-primary);
+    margin: 10px auto 0 auto;
 }
 
-.cards-container {
+.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    gap: 30px;
 }
 
-/* Checkbox oculto para dar soporte táctil/móviles */
-.flip-toggle {
-    display: none;
+/* Contenedor Perspectiva 3D */
+.product-card {
+    background-color: transparent;
+    height: 480px;
+    perspective: 1000px; /* Habilita el espacio tridimensional */
 }
 
-/* Contenedor principal 3D */
-.card-flip-container {
-    perspective: 1000px;
-    height: 400px;
-}
-
-/* Elemento interno que gira */
-.card-flip-inner {
+/* Elemento contenedor interno que gira */
+.card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-/* GIRO AL PASAR EL CURSOR (HOVER) O AL DAR CLIC EN BOTÓN */
-.card-flip-container:hover .card-flip-inner,
-.flip-toggle:checked + .card-flip-inner {
+/* Activadores del Giro a 180 grados */
+.product-card:hover .card-inner,
+.product-card:focus-within .card-inner {
     transform: rotateY(180deg);
 }
 
-/* Caras de la tarjeta */
+/* Estilos comunes de Frente y Reverso */
 .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    background-size: cover;
-    background-position: center;
+    backface-visibility: hidden; /* Oculta la parte posterior durante el giro */
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
     overflow: hidden;
 }
 
-/* --- FRENTE DE LA TARJETA --- */
+/* FRENTE */
 .card-front {
-    display: flex;
-    align-items: flex-end;
-}
-
-.card-front-content {
-    width: 100%;
-    padding: 2rem 1.5rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-    color: var(--white);
+    background-color: var(--bg-card);
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
 }
 
-.card-front-content h3 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-}
-
-/* Botón "Ver detalles" del Frente */
-.btn-detail {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 0.6rem 1.4rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.btn-detail:hover {
-    background-color: var(--white);
-    color: var(--text-color);
-}
-
-/* --- REVERSO DE LA TARJETA --- */
-.card-back {
-    transform: rotateY(180deg);
-}
-
-/* Capa de fondo oscurecida para resaltar texto */
-.card-back-overlay {
-    background-color: rgba(0, 0, 0, 0.82); /* Fondo Oscurecido */
-    backdrop-filter: blur(3px);
+.product-img-placeholder {
     width: 100%;
-    height: 100%;
-    padding: 2.5rem 1.8rem;
+    height: 200px;
+    border-radius: 8px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--white);
+    color: var(--gold-primary);
+    font-family: var(--font-heading);
+    border: 1px dashed var(--gold-primary);
+    background-size: cover;
+    background-position: center;
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.product-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.price {
+    display: block;
+    font-weight: 600;
+    color: var(--gold-primary);
+}
+
+.btn-card {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--gold-primary);
+    color: var(--bg-dark);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: background 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: var(--gold-hover);
+}
+
+.btn-flip {
+    background-color: transparent;
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
+}
+
+.btn-flip:hover {
+    background-color: var(--gold-primary);
+    color: var(--bg-dark);
+}
+
+/* REVERSO DE LA TARJETA (GIRADO 180 DEG DE BASE) */
+.card-back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Capa Oscurecida para Resaltar el Texto */
+.card-back-overlay {
+    background: rgba(0, 0, 0, 0.85); /* Fondo oscuro superpuesto */
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .card-back-overlay h3 {
+    color: var(--gold-primary);
     font-family: var(--font-heading);
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--gold-primary);
+    padding-bottom: 10px;
 }
 
-.card-back-overlay p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
+.details-text {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    text-align: left;
+    line-height: 1.5;
 }
 
-.btn-back-close {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
-    cursor: pointer;
-    text-decoration: underline;
-    display: none; /* Se activa opcionalmente en móviles */
+.details-text strong {
+    color: var(--gold-primary);
 }
 
-/* ==========================================================================
-   SECCIÓN SOBRE NOSOTROS
-   ========================================================================== */
-.about {
-    background-color: #f3ede2;
-    padding: 5rem 2rem;
+/* IMÁGENES DE FONDO (Simuladas con Gradientes Elegantes) */
+.img-rose {
+    background: linear-gradient(135deg, #2b111e, #121212);
+}
+
+.img-oud {
+    background: linear-gradient(135deg, #1c1810, #121212);
+}
+
+.img-custom {
+    background: linear-gradient(135deg, #0f2027, #121212);
+}
+
+/* ==========================================
+   SECCIÓN PERSONALIZADA
+   ========================================== */
+.custom-section {
+    padding: 80px 8%;
+    background: linear-gradient(rgba(18,18,18,0.9), rgba(18,18,18,0.9)), 
+                radial-gradient(var(--gold-primary), transparent 70%);
     text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
-.about-content {
+.custom-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--gold-primary);
+    margin-bottom: 15px;
+}
+
+.custom-content p {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
+    color: var(--text-light);
 }
 
-.about h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--gold-primary);
+    color: var(--bg-dark);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.3s ease;
 }
 
-.about p {
-    color: var(--text-color);
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.8;
+.btn-secondary:hover {
+    background-color: var(--gold-hover);
 }
 
-/* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
-.footer {
-    background-color: #222222;
-    color: var(--white);
-    padding: 4rem 2rem 2rem;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.motivational-quote {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-style: italic;
-    color: var(--secondary-color);
-    margin-bottom: 2rem;
-    line-height: 1.4;
-}
-
-.copyright {
-    color: #888888;
-    font-size: 0.85rem;
-    border-top: 1px solid #333333;
-    padding-top: 2rem;
-}
-
-/* ==========================================================================
+/* ==========================================
    BOTÓN FLOTANTE DE WHATSAPP
-   ========================================================================== */
+   ========================================== */
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
     bottom: 30px;
     right: 30px;
-    background-color: var(--whatsapp-color);
+    background-color: #25d366;
+    color: #FFF;
     border-radius: 50px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
-    z-index: 2000;
-    transition: all 0.3s ease;
+    align-items: center;
+    transition: transform 0.3s ease;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    box-shadow: 2px 8px 20px rgba(0,0,0,0.4);
 }
 
 .whatsapp-icon {
     width: 35px;
     height: 35px;
-    fill: var(--white);
+    fill: white;
 }
 
-/* ==========================================================================
-   RESPONSIVO
-   ========================================================================== */
+/* ==========================================
+   PIE DE PÁGINA / FOOTER
+   ========================================== */
+.footer {
+    background-color: #0a0a0a;
+    padding: 50px 8% 20px 8%;
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer h3 {
+    font-family: var(--font-heading);
+    color: var(--gold-primary);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 5px auto;
+}
+
+.bible-ref {
+    display: block;
+    color: var(--gold-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.copyright p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MÓVILES)
+   ========================================== */
 @media (max-width: 768px) {
-    .nav-container {
+    .header {
         flex-direction: column;
-        gap: 1rem;
+        gap: 15px;
     }
 
-    .hero-content h1 {
-        font-size: 2.4rem;
+    .nav a {
+        margin: 0 10px;
     }
 
-    .hero-content p {
-        font-size: 1rem;
+    .hero-content h2 {
+        font-size: 2rem;
     }
 
-    .motivational-quote {
-        font-size: 1.4rem;
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
     }
 
-    .btn-back-close {
-        display: inline-block;
+    .whatsapp-icon {
+        width: 28px;
+        height: 28px;
     }
 }
