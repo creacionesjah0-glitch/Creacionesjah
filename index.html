@@ -5,96 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOLD PERFUM | La Fragancia de los Vencedores</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fuentes Elegantes de Google Fonts -->
+    <!-- Fuentes de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Encabezado y Navegación con el Logo Limpio -->
+    <!-- Encabezado y Navegación -->
     <header class="header">
         <div class="logo">
-            <!-- Si tienes la imagen del logo localmente, pon logo_gold_perfum.png -->
-            <img src="logo_gold_perfum_final_clean.png" alt="GOLD PERFUM Logo" class="header-logo-img">
+            <a href="#inicio">
+                <img src="logo_gold_perfum.png" alt="GOLD PERFUM Logo" class="header-logo-img">
+            </a>
         </div>
         <nav class="nav">
             <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Quiénes Somos</a>
             <a href="#catalogo">Catálogo</a>
-            <a href="#personalizados">A tu Gusto</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#faq">Preguntas Frecuentes</a>
+            <a href="#contacto" class="btn-nav">Contacto</a>
         </nav>
     </header>
 
-    <!-- Sección Principal / Banner con Logo Destacado -->
+    <!-- Banner Principal (Hero) -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <img src="logo_gold_perfum_final_clean.png" alt="GOLD PERFUM - La Fragancia de los Vencedores" class="hero-logo-img">
-            <h2>El Arte de la Elegancia Hecho Fragancia</h2>
-            <p>Perfumes y colonias exclusivas, creadas según tu estilo y preferencia.</p>
-            <a href="#catalogo" class="btn-primary">Ver Colección</a>
+            <img src="logo_gold_perfum.png" alt="GOLD PERFUM - La Fragancia de los Vencedores" class="hero-logo-img">
+            <h2>Elegancia, Exclusividad y Larga Duración</h2>
+            <p>Descubre el perfume o colonia diseñado a tu medida. Calidad premium para damas y caballeros con la más alta fijación del mercado.</p>
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn-primary">Explorar Catálogo (10 Fragancias)</a>
+                <a href="https://wa.me/573043833680?text=Hola,%20deseo%20asesoría%20personalizada%20para%20elegir%20mi%20perfume" class="btn-secondary-outline" target="_blank">Asesoría Directa</a>
+            </div>
         </div>
     </section>
 
-    <!-- Sección de Productos / Catálogo con Tarjetas 3D Flip (180°) y Precios Sugeridos -->
-    <section id="catalogo" class="catalog">
-        <h2 class="section-title">Nuestra Colección</h2>
-        <div class="product-grid">
-            
-            <!-- TARJETA 1 -->
-            <div class="product-card">
-                <div class="card-inner">
-                    <!-- FRENTE DE LA TARJETA -->
-                    <div class="card-front">
-                        <div class="product-img-placeholder img-rose">
-                            <span>GOLD ESSENCE ROSE</span>
-                        </div>
-                        <h3>Gold Essence Rose</h3>
-                        <p>Notas florales y dulces diseñadas a la medida.</p>
-                        <span class="price">$120.000 COP <small>(Sugerido)</small></span>
-                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
-                    </div>
-
-                    <!-- REVERSO DE LA TARJETA (GIRADO 180 DEG) -->
-                    <div class="card-back img-rose">
-                        <div class="card-back-overlay">
-                            <h3>Gold Essence Rose</h3>
-                            <div class="details-text">
-                                <p><strong>Concentración:</strong> Perfume o Colonia (según elección).</p>
-                                <p><strong>Notas de Salida:</strong> Rosa de Damasco y Bergamota.</p>
-                                <p><strong>Notas de Corazón:</strong> Jazmín y Peonía.</p>
-                                <p><strong>Notas de Fondo:</strong> Vainilla y Almizcle Blanco.</p>
-                                <p class="highlight-text"><em>Alta fijación garantizada todo el día.</em></p>
-                            </div>
-                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Gold%20Essence%20Rose" class="btn-card" target="_blank">Pedir por WhatsApp</a>
-                        </div>
-                    </div>
+    <!-- Sección Quiénes Somos -->
+    <section id="nosotros" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <span class="sub-title">Nuestra Filosofía</span>
+                <h2>Quiénes Somos</h2>
+                <p>En <strong>GOLD PERFUM</strong> creemos que una fragancia es más que un aroma: es la carta de presentación de quienes persiguen el éxito y la elegancia. Creados para ser <em>"La Fragancia de los Vencedores"</em>, trabajamos con esencias seleccionadas e ingredientes de alta pureza para ofrecer perfumes y colonias con la máxima permanencia en piel y prendas.</p>
+                <p>Nos especializamos tanto en contratipos de alta gama como en formulaciones personalizadas según el gusto exacto del cliente (mayor concentración o frescura diaria).</p>
+            </div>
+            <div class="about-badge">
+                <div class="badge-card">
+                    <h3>+1000</h3>
+                    <p>Clientes Satisfechos</p>
+                </div>
+                <div class="badge-card">
+                    <h3>100%</h3>
+                    <p>Fijación Garantizada</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- TARJETA 2 -->
+    <!-- Sección Catálogo de Productos (10 Tarjetas Flip 3D) -->
+    <section id="catalogo" class="catalog">
+        <span class="sub-title">Nuestra Colección Exclusiva</span>
+        <h2 class="section-title">Catálogo de Perfumes & Colonias</h2>
+        <p class="section-desc">Pasa el cursor o presiona <strong>"Ver Detalles"</strong> para girar la tarjeta y descubrir las notas olfativas de cada fragancia.</p>
+
+        <div class="product-grid">
+            
+            <!-- PRODUCTO 1 -->
             <div class="product-card">
                 <div class="card-inner">
-                    <!-- FRENTE DE LA TARJETA -->
                     <div class="card-front">
-                        <div class="product-img-placeholder img-oud">
+                        <div class="product-img-box img-bg-1">
                             <span>GOLD INTENSE OUD</span>
                         </div>
-                        <h3>Gold Intense Oud</h3>
-                        <p>Aroma amaderado e intenso con alta fijación.</p>
+                        <h3>1. Gold Intense Oud</h3>
+                        <p>Aroma amaderado, cálido e imponente.</p>
                         <span class="price">$150.000 COP <small>(Sugerido)</small></span>
                         <button class="btn-card btn-flip" type="button">Ver Detalles</button>
                     </div>
-
-                    <!-- REVERSO DE LA TARJETA -->
-                    <div class="card-back img-oud">
+                    <div class="card-back img-bg-1">
                         <div class="card-back-overlay">
                             <h3>Gold Intense Oud</h3>
                             <div class="details-text">
-                                <p><strong>Concentración:</strong> Parfum / Extrait de Parfum.</p>
-                                <p><strong>Notas de Salida:</strong> Madera de Oud y Azafrán.</p>
-                                <p><strong>Notas de Corazón:</strong> Ámbar y Cardamomo.</p>
-                                <p><strong>Notas de Fondo:</strong> Cuero y Sándalo.</p>
-                                <p class="highlight-text"><em>Aroma sofisticado e imponente.</em></p>
+                                <p><strong>Línea:</strong> Masculina Premium</p>
+                                <p><strong>Salida:</strong> Madera de Oud y Azafrán</p>
+                                <p><strong>Corazón:</strong> Ámbar y Cardamomo</p>
+                                <p><strong>Fondo:</strong> Cuero y Sándalo</p>
+                                <p class="highlight-text"><em>Ideal para noches y ocasiones especiales.</em></p>
                             </div>
                             <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Gold%20Intense%20Oud" class="btn-card" target="_blank">Pedir por WhatsApp</a>
                         </div>
@@ -102,30 +100,251 @@
                 </div>
             </div>
 
-            <!-- TARJETA 3 -->
+            <!-- PRODUCTO 2 -->
             <div class="product-card">
                 <div class="card-inner">
-                    <!-- FRENTE DE LA TARJETA -->
                     <div class="card-front">
-                        <div class="product-img-placeholder img-custom">
-                            <span>EDICIÓN PERSONALIZADA</span>
+                        <div class="product-img-box img-bg-2">
+                            <span>GOLD ESSENCE ROSE</span>
                         </div>
-                        <h3>Fragancia a tu Gusto</h3>
-                        <p>Elige la intensidad, tipo de aroma y tamaño.</p>
+                        <h3>2. Gold Essence Rose</h3>
+                        <p>Notas florales, dulces y sofisticadas.</p>
+                        <span class="price">$130.000 COP <small>(Sugerido)</small></span>
+                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
+                    </div>
+                    <div class="card-back img-bg-2">
+                        <div class="card-back-overlay">
+                            <h3>Gold Essence Rose</h3>
+                            <div class="details-text">
+                                <p><strong>Línea:</strong> Femenina Elegante</p>
+                                <p><strong>Salida:</strong> Rosa de Damasco y Bergamota</p>
+                                <p><strong>Corazón:</strong> Peonía y Jazmín</p>
+                                <p><strong>Fondo:</strong> Vainilla Dulce y Almizcle</p>
+                                <p class="highlight-text"><em>Fragancia envolvente de alta fijación.</em></p>
+                            </div>
+                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Gold%20Essence%20Rose" class="btn-card" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 3 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-img-box img-bg-3">
+                            <span>ROYAL CITRUS GOLD</span>
+                        </div>
+                        <h3>3. Royal Citrus Gold</h3>
+                        <p>Explosión cítrica y marina ultrafresca.</p>
+                        <span class="price">$110.000 COP <small>(Sugerido)</small></span>
+                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
+                    </div>
+                    <div class="card-back img-bg-3">
+                        <div class="card-back-overlay">
+                            <h3>Royal Citrus Gold</h3>
+                            <div class="details-text">
+                                <p><strong>Línea:</strong> Colonia Masculina / Unisex</p>
+                                <p><strong>Salida:</strong> Mandarina, Limón y Menta</p>
+                                <p><strong>Corazón:</strong> Brisa Marina y Jengibre</p>
+                                <p><strong>Fondo:</strong> Madera de Cedro</p>
+                                <p class="highlight-text"><em>Sensación de frescura durante todo el día.</em></p>
+                            </div>
+                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Royal%20Citrus%20Gold" class="btn-card" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 4 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-img-box img-bg-4">
+                            <span>BLACK VANILLA CROWN</span>
+                        </div>
+                        <h3>4. Black Vanilla Crown</h3>
+                        <p>Seducción oriental de vainilla especiada.</p>
+                        <span class="price">$140.000 COP <small>(Sugerido)</small></span>
+                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
+                    </div>
+                    <div class="card-back img-bg-4">
+                        <div class="card-back-overlay">
+                            <h3>Black Vanilla Crown</h3>
+                            <div class="details-text">
+                                <p><strong>Línea:</strong> Femenina / Unisex Premium</p>
+                                <p><strong>Salida:</strong> Canela y Orquídea Negra</p>
+                                <p><strong>Corazón:</strong> Vainilla de Madagascar</p>
+                                <p><strong>Fondo:</strong> Ámbar Dorado y Tonka</p>
+                                <p class="highlight-text"><em>Ideal para dejar huella a donde vayas.</em></p>
+                            </div>
+                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Black%20Vanilla%20Crown" class="btn-card" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 5 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-img-box img-bg-5">
+                            <span>SILVER SADDLE MASCULINO</span>
+                        </div>
+                        <h3>5. Silver Saddle</h3>
+                        <p>Frescura aromática con toques de lavanda y roble.</p>
+                        <span class="price">$125.000 COP <small>(Sugerido)</small></span>
+                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
+                    </div>
+                    <div class="card-back img-bg-5">
+                        <div class="card-back-overlay">
+                            <h3>Silver Saddle</h3>
+                            <div class="details-text">
+                                <p><strong>Línea:</strong> Masculina Clásica</p>
+                                <p><strong>Salida:</strong> Lavanda y Romero</p>
+                                <p><strong>Corazón:</strong> Geranio y Salvia</p>
+                                <p><strong>Fondo:</strong> Musgo de Roble y Vetiver</p>
+                                <p class="highlight-text"><em>Versátil para trabajo y uso diario.</em></p>
+                            </div>
+                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Silver%20Saddle" class="btn-card" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 6 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-img-box img-bg-6">
+                            <span>SWEET NIGHT GOLD</span>
+                        </div>
+                        <h3>6. Sweet Night Gold</h3>
+                        <p>Dulce, frutal y radiante para damas.</p>
+                        <span class="price">$130.000 COP <small>(Sugerido)</small></span>
+                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
+                    </div>
+                    <div class="card-back img-bg-6">
+                        <div class="card-back-overlay">
+                            <h3>Sweet Night Gold</h3>
+                            <div class="details-text">
+                                <p><strong>Línea:</strong> Femenina Dulce</p>
+                                <p><strong>Salida:</strong> Frutos Rojos y Caramelo</p>
+                                <p><strong>Corazón:</strong> Flor de Azahar</p>
+                                <p><strong>Fondo:</strong> Praliné y Almizcle</p>
+                                <p class="highlight-text"><em>Aroma juvenil y muy duradero.</em></p>
+                            </div>
+                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Sweet%20Night%20Gold" class="btn-card" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 7 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-img-box img-bg-7">
+                            <span>IMPERIAL WOODS</span>
+                        </div>
+                        <h3>7. Imperial Woods</h3>
+                        <p>Notas amaderadas y especiadas elegantes.</p>
+                        <span class="price">$145.000 COP <small>(Sugerido)</small></span>
+                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
+                    </div>
+                    <div class="card-back img-bg-7">
+                        <div class="card-back-overlay">
+                            <h3>Imperial Woods</h3>
+                            <div class="details-text">
+                                <p><strong>Línea:</strong> Masculina Nocturna</p>
+                                <p><strong>Salida:</strong> Pimienta Negra y Pimienta Rosa</p>
+                                <p><strong>Corazón:</strong> Madera de Guayaco</p>
+                                <p><strong>Fondo:</strong> Pachulí y Incienso</p>
+                                <p class="highlight-text"><em>Fuerza y presencia distintiva.</em></p>
+                            </div>
+                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Imperial%20Woods" class="btn-card" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 8 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-img-box img-bg-8">
+                            <span>FRESH COCONUT GOLD</span>
+                        </div>
+                        <h3>8. Fresh Coconut Gold</h3>
+                        <p>Brisa tropical de coco dulce y flores blancas.</p>
+                        <span class="price">$115.000 COP <small>(Sugerido)</small></span>
+                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
+                    </div>
+                    <div class="card-back img-bg-8">
+                        <div class="card-back-overlay">
+                            <h3>Fresh Coconut Gold</h3>
+                            <div class="details-text">
+                                <p><strong>Línea:</strong> Femenina / Colonia Fresca</p>
+                                <p><strong>Salida:</strong> Agua de Coco y Lima</p>
+                                <p><strong>Corazón:</strong> Tiaré y Lirio del Valle</p>
+                                <p><strong>Fondo:</strong> Madera de Balsa y Vainilla</p>
+                                <p class="highlight-text"><em>Ideal para climas cálidos y descanso.</em></p>
+                            </div>
+                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Fresh%20Coconut%20Gold" class="btn-card" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 9 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-img-box img-bg-9">
+                            <span>GOLDEN AMBER UNISEX</span>
+                        </div>
+                        <h3>9. Golden Amber</h3>
+                        <p>Ámbar resplandeciente e intenso.</p>
                         <span class="price">$135.000 COP <small>(Sugerido)</small></span>
                         <button class="btn-card btn-flip" type="button">Ver Detalles</button>
                     </div>
-
-                    <!-- REVERSO DE LA TARJETA -->
-                    <div class="card-back img-custom">
+                    <div class="card-back img-bg-9">
                         <div class="card-back-overlay">
-                            <h3>Fragancia Personalizada</h3>
+                            <h3>Golden Amber</h3>
                             <div class="details-text">
-                                <p><strong>1. Elige el Tipo:</strong> Colonia fresca o Perfume concentrado.</p>
-                                <p><strong>2. Elige la Familia:</strong> Cítrico, Amaderado, Dulce, Oriental o Floral.</p>
-                                <p><strong>3. Envasado Exclusivo:</strong> Personalizado según tu estilo único.</p>
+                                <p><strong>Línea:</strong> Unisex Nicho</p>
+                                <p><strong>Salida:</strong> Nuez Moscada y Ámbar</p>
+                                <p><strong>Corazón:</strong> Resina de Mirra</p>
+                                <p><strong>Fondo:</strong> Benjuí y Labdano</p>
+                                <p class="highlight-text"><em>Para amantes de perfumes exclusivos.</em></p>
                             </div>
-                            <a href="https://wa.me/573043833680?text=Hola,%20quiero%20crear%20mi%20perfume%20personalizado" class="btn-card" target="_blank">Personalizar por WhatsApp</a>
+                            <a href="https://wa.me/573043833680?text=Hola,%20deseo%20comprar%20Golden%20Amber" class="btn-card" target="_blank">Pedir por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 10 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-img-box img-bg-10">
+                            <span>A TU GUSTO (PERSONALIZADO)</span>
+                        </div>
+                        <h3>10. Edición a tu Gusto</h3>
+                        <p>Fragancia creada 100% según tu preferencia.</p>
+                        <span class="price">$140.000 COP <small>(Sugerido)</small></span>
+                        <button class="btn-card btn-flip" type="button">Ver Detalles</button>
+                    </div>
+                    <div class="card-back img-bg-10">
+                        <div class="card-back-overlay">
+                            <h3>Edición Personalizada</h3>
+                            <div class="details-text">
+                                <p><strong>1. Elige el formato:</strong> Perfume Intenso o Colonia Ligera.</p>
+                                <p><strong>2. Elige tus aromas:</strong> Amaderado, Dulce, Cítrico o Frutal.</p>
+                                <p><strong>3. Empaque personalizado:</strong> Tu nombre en el frasco.</p>
+                            </div>
+                            <a href="https://wa.me/573043833680?text=Hola,%20quiero%20crear%20mi%20fragancia%20a%20mi%20gusto" class="btn-card" target="_blank">Crear por WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -134,28 +353,91 @@
         </div>
     </section>
 
-    <!-- Sección Personalizada -->
-    <section id="personalizados" class="custom-section">
-        <div class="custom-content">
-            <h2>¿Perfume o Colonia? Tú Eliges.</h2>
-            <p>Adaptamos la fragancia a tu gusto exacto: mayor concentración para larga duración o fórmulas frescas para el uso diario.</p>
-            <a href="https://wa.me/573043833680?text=Hola,%20me%20gustaría%20asesoría%20para%20elegir%20mi%20perfume" class="btn-secondary" target="_blank">Recibir Asesoría</a>
+    <!-- Sección Beneficios / Por qué Elegirnos -->
+    <section id="beneficios" class="features-section">
+        <span class="sub-title">Excelencia Garantizada</span>
+        <h2>¿Por qué elegir GOLD PERFUM?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💧</div>
+                <h3>Alta Concentración</h3>
+                <p>Nuestras formulaciones garantizan una fijación superior entre 8 y 12 horas en piel.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Personalización Única</h3>
+                <p>Eliges si deseas tu fragancia como perfume concentrado o colonia fresca.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3>Envíos Nacionales</h3>
+                <p>Despachamos de manera rápida y segura a cualquier ciudad de Colombia.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👑</div>
+                <h3>Garantía de Satisfacción</h3>
+                <p>Ingredientes seleccionados para brindar la experiencia de la perfumería fina.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Botón Flotante de WhatsApp para Contacto -->
+    <!-- Sección Preguntas Frecuentes (FAQ Accordion con HTML/CSS puro) -->
+    <section id="faq" class="faq-section">
+        <span class="sub-title">Resolvemos tus dudas</span>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary class="faq-question">¿Cuál es la diferencia entre Perfume y Colonia en GOLD PERFUM?</summary>
+                <div class="faq-answer">
+                    <p>El <strong>Perfume</strong> posee una mayor concentración de aceites esenciales (alrededor del 20%-30%), ideal para que el aroma dure todo el día e impresione en eventos. La <strong>Colonia</strong> es una formulación más ligera y refrescante, perfecta para el uso diario o recién salido de la ducha.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">¿Cuánto tiempo dura el aroma en la piel?</summary>
+                <div class="faq-answer">
+                    <p>Nuestras fragancias están formuladas con fijadores de alta calidad. En promedio, nuestros perfumes duran entre 8 a 12 horas en la piel y hasta 24 horas en las prendas de vestir.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">¿Cómo puedo pedir una fragancia personalizada?</summary>
+                <div class="faq-answer">
+                    <p>Es muy sencillo: nos escribes a nuestro WhatsApp (+573043833680) e indicas tus notas olfativas preferidas (dulce, amaderado, cítrico, floral) y si deseas el formato en perfume o colonia. ¡Nosotros lo elaboramos para ti!</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">¿Cómo realizan los envíos y medios de pago?</summary>
+                <div class="faq-answer">
+                    <p>Realizamos envíos a toda Colombia a través de transportadoras aliadas. Aceptamos transferencias Nequi, Daviplata, Bancolombia y pago contra entrega según tu ubicación.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Botón Flotante de WhatsApp -->
     <a href="https://wa.me/573043833680" class="whatsapp-float" target="_blank" aria-label="Contacto por WhatsApp">
         <svg viewBox="0 0 32 32" class="whatsapp-icon">
             <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.135-2.135c2.372 1.3 5.060 1.987 7.865 1.987 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.35c-2.48 0-4.912-0.665-7.042-1.924l-0.505-0.3-5.234 1.373 1.397-5.201-0.33-0.525c-1.381-2.199-2.113-4.739-2.113-7.323 0-7.595 6.18-13.775 13.775-13.775s13.775 6.18 13.775 13.775c0 7.595-6.18 13.775-13.775 13.775zM22.486 19.389c-0.355-0.178-2.102-1.037-2.428-1.155-0.325-0.118-0.562-0.178-0.799 0.178s-0.917 1.155-1.124 1.391c-0.207 0.237-0.414 0.266-0.77 0.089-0.355-0.178-1.501-0.553-2.859-1.764-1.057-0.942-1.771-2.106-1.978-2.461-0.207-0.355-0.022-0.547 0.156-0.724 0.16-0.159 0.355-0.414 0.533-0.621 0.178-0.207 0.237-0.355 0.355-0.592 0.118-0.237 0.059-0.444-0.030-0.621s-0.799-1.924-1.095-2.634c-0.288-0.691-0.582-0.597-0.799-0.608-0.207-0.010-0.444-0.010-0.681-0.010s-0.621 0.089-0.947 0.444c-0.325 0.355-1.243 1.213-1.243 2.96 0 1.746 1.272 3.433 1.45 3.67 0.178 0.237 2.504 3.824 6.066 5.362 0.847 0.366 1.508 0.584 2.024 0.748 0.851 0.27 1.626 0.232 2.238 0.14 0.683-0.102 2.102-0.858 2.398-1.687 0.296-0.829 0.296-1.539 0.207-1.687-0.089-0.148-0.325-0.237-0.681-0.414z"/>
         </svg>
     </a>
 
-    <!-- Pie de Página con Cita Bíblica -->
-    <footer class="footer">
+    <!-- Pie de Página (Footer) -->
+    <footer id="contacto" class="footer">
         <div class="footer-content">
-            <img src="logo_gold_perfum_final_clean.png" alt="GOLD PERFUM" class="footer-logo-img">
-            <p class="quote">"Todo lo puedo en Cristo que me fortalece. Guiados por la fe para ofrecerte lo mejor."</p>
-            <span class="bible-ref">— Filipenses 4:13</span>
+            <img src="logo_gold_perfum.png" alt="GOLD PERFUM" class="footer-logo-img">
+            
+            <div class="footer-contact-info">
+                <p>📍 Envíos a todo Colombia | 📞 WhatsApp: <strong>+57 304 383 3680</strong></p>
+            </div>
+
+            <div class="quote-box">
+                <p class="quote">"Todo lo puedo en Cristo que me fortalece. Guiados por la fe para ofrecerte la fragancia de los vencedores."</p>
+                <span class="bible-ref">— Filipenses 4:13</span>
+            </div>
+
             <div class="copyright">
                 <p>&copy; 2026 GOLD PERFUM. Todos los derechos reservados.</p>
             </div>
